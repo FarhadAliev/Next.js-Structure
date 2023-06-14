@@ -2,7 +2,12 @@
   "name": "structure",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.1.0",
+    "npm": "8.x"
+  },
   "scripts": {
+    "preinstall": "if [ \"$npm_execpath\" != \"$(which npm)\" ]; then echo \"Please use 'npm' instead of 'yarn' for package installation.\"; exit 1; fi",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
